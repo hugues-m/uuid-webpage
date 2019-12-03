@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import id from 'uuid/v4';
 import './App.css';
+import copyToClipboard from './copyToClipboard';
 
-const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component<{}, { uuid: string }> {
+    state = {
+        uuid: id(),
+    };
+
+    componentDidMount(): void {
+        copyToClipboard(this.state.uuid);
+    }
+
+    generateNewOne(): void {
+        const uuid = id();
+        this.setState({ uuid });
+        copyToClipboard(uuid);
+    }
+
+    render() {
+        return (
+            <div className="App">
+        <header className="App-header">
+            <h1>UUID v4 generator</h1>
+          <h2>{this.state.uuid}</h2>
+          <p>UUID has been copied to your clipboard !</p>
+          <a
+              className="App-link"
+              onClick={() => this.generateNewOne()}
+          >
+            Generate new one
+          </a>
+        </header>
+      </div>
+        );
+    }
 }
 
 export default App;
