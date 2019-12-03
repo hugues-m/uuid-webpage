@@ -50,7 +50,7 @@ class App extends Component {
           <h1>UUID v4 generator</h1>
           <h2>{this.state.uuid}</h2>
           {this.state.copiedConfirmation ? (
-            <p>UUID has been copied to your clipboard !"</p>
+            <p>UUID has been copied to your clipboard!</p>
           ) : (
             <p>
               <a className="App-link" onClick={() => this.copyToClipboard()}>
