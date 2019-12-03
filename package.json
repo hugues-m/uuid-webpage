@@ -2,7 +2,7 @@
   "name": "uuid-webpage",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://hugues-m.github.io/uuid-webpage",
+  "homepage": "https://uuid.kime.tech",
   "dependencies": {
     "@types/jest": "24.0.23",
     "@types/node": "12.12.14",
