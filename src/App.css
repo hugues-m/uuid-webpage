@@ -1,14 +1,17 @@
-.App {
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+.app {
   text-align: center;
+  height: 100%;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
+.content {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100%;
   padding: 0 calc(10px + 2vmin) 0 calc(10px + 2vmin);
   display: flex;
   flex-direction: column;
@@ -18,7 +21,11 @@
   color: white;
 }
 
-.App-link {
+.title {
+
+}
+
+.link {
   cursor: pointer;
   color: #09d3ac;
 }

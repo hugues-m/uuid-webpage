@@ -45,28 +45,28 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
+      <div className="app">
+        <section className="content">
           <h1>UUID v4 generator</h1>
-          <h2>{this.state.uuid}</h2>
+          <h3>{this.state.uuid}</h3>
           {this.state.copiedConfirmation ? (
             <p>UUID has been copied to your clipboard!</p>
           ) : (
             <p>
-              <a className="App-link" onClick={() => this.copyToClipboard()}>
+              <a className="link" onClick={() => this.copyToClipboard()}>
                 Copy to clipboard
               </a>
             </p>
           )}
           <p>
-            <a className="App-link" onClick={() => this.generateNewOne()}>
+            <a className="link" onClick={() => this.generateNewOne()}>
               Generate new one
             </a>
           </p>
           <p>
             You can also press <strong>Enter</strong> to generate a new UUID.
           </p>
-        </header>
+        </section>
       </div>
     );
   }
